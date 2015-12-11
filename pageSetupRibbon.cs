@@ -16,12 +16,7 @@ namespace SetReportPageSettings
 
         private void setPageSetup_Click(object sender, RibbonControlEventArgs e)
         {
-            Excel.Application exApp = Globals.ThisAddIn.Application;
-
-            foreach( Excel.Worksheet ws in exApp.ThisWorkbook.Worksheets )
-            {
-                ws.PageSetup.TopMargin = 0;
-            }
+            Globals.ThisAddIn.runInitialSetup();
         }
     }
 }
