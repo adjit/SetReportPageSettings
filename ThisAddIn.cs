@@ -19,6 +19,9 @@ namespace SetReportPageSettings
         XDocument xmlFile;
         String xmlFilePath = @"C:\Excel Addins\customHeaders.xml";
 
+        XDocument alanFile;
+        String alanFilePath = @"\\metro-file1\Homeshares\atawil\Documents\Programming\motivateAlan.xml";
+
         String headerText = "";
 
         public void runInitialSetup()
@@ -94,6 +97,34 @@ namespace SetReportPageSettings
                 .Remove();
             xmlFile.Save(xmlFilePath);
             System.Windows.Forms.MessageBox.Show("Header deleted.");
+        }
+
+        public void motivateAlan()
+        {
+            alanFile = XDocument.Load(alanFilePath);
+            int count = alanFile.Descendants("blurbs").Elements("blurb").Count();
+            Random rand = new Random();
+            int randNumber = rand.Next(0, count);
+            System.Windows.Forms.MessageBox.Show(alanFile.Descendants("blurbs").Elements("blurb").ElementAt(randNumber).Value);
+        }
+
+        public void setWorksheet()
+        {
+            int wsIndex = psf.headerWorksheetList.SelectedIndex;
+
+            if (wsIndex < 0)
+            {
+                System.Windows.Forms.MessageBox.Show("Please select a worksheet to setup", "Please select worksheet");
+                return;
+            }
+
+            Excel.PageSetup thisWorksheet = myWorksheets[wsIndex].PageSetup;
+
+            thisWorksheet.CenterHeader = psf.customHeaderList.Text;
+            if (psf.landscapeRadioButton.Checked) thisWorksheet.Orientation = Excel.XlPageOrientation.xlLandscape;
+            else if (psf.portraitRadioButton.Checked) thisWorksheet.Orientation = Excel.XlPageOrientation.xlLandscape;
+
+            System.Windows.Forms.MessageBox.Show("Page setup completed!", "Success");
         }
 
         private void ThisAddIn_Startup(object sender, System.EventArgs e)

@@ -26,5 +26,16 @@ namespace SetReportPageSettings
         {
             Globals.ThisAddIn.deleteHeader(customHeaderList.Text);
         }
+
+        private void finishButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Globals.ThisAddIn.motivateAlan();
+        }
+
+        private void setThisWorksheet_Click(object sender, EventArgs e)
+        {
+            Globals.ThisAddIn.setWorksheet();
+        }
     }
 }

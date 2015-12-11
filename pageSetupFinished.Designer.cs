@@ -170,6 +170,7 @@
             this.setThisWorksheet.TabIndex = 10;
             this.setThisWorksheet.Text = "Set This Worksheet";
             this.setThisWorksheet.UseVisualStyleBackColor = true;
+            this.setThisWorksheet.Click += new System.EventHandler(this.setThisWorksheet_Click);
             // 
             // finishButton
             // 
@@ -180,6 +181,7 @@
             this.finishButton.TabIndex = 3;
             this.finishButton.Text = "Finish";
             this.finishButton.UseVisualStyleBackColor = true;
+            this.finishButton.Click += new System.EventHandler(this.finishButton_Click);
             // 
             // deleteHeader
             // 
@@ -218,11 +220,11 @@
         private System.Windows.Forms.Button saveHeader;
         private System.Windows.Forms.Label setHeaderLabel;
         private System.Windows.Forms.Label selectWorksheetLabel;
-        private System.Windows.Forms.RadioButton landscapeRadioButton;
-        private System.Windows.Forms.RadioButton portraitRadioButton;
         private System.Windows.Forms.Button finishButton;
         private System.Windows.Forms.Button deleteHeader;
         internal System.Windows.Forms.ComboBox headerWorksheetList;
         internal System.Windows.Forms.ComboBox customHeaderList;
+        internal System.Windows.Forms.RadioButton landscapeRadioButton;
+        internal System.Windows.Forms.RadioButton portraitRadioButton;
     }
 }
