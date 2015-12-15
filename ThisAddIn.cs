@@ -66,7 +66,7 @@ namespace SetReportPageSettings
                 psf.headerWorksheetList.Items.Add(ws.Name);
 
                 ps = ws.PageSetup;
-
+                ps.Zoom = false;
                 ps.FitToPagesWide = 1;
                 ps.FitToPagesTall = 1;
                 ps.LeftMargin = 0;
@@ -101,11 +101,15 @@ namespace SetReportPageSettings
 
         public void motivateAlan()
         {
-            alanFile = XDocument.Load(alanFilePath);
-            int count = alanFile.Descendants("blurbs").Elements("blurb").Count();
-            Random rand = new Random();
-            int randNumber = rand.Next(0, count);
-            System.Windows.Forms.MessageBox.Show(alanFile.Descendants("blurbs").Elements("blurb").ElementAt(randNumber).Value);
+            if (File.Exists(alanFilePath))
+            {
+                alanFile = XDocument.Load(alanFilePath);
+                int count = alanFile.Descendants("blurbs").Elements("blurb").Count();
+                Random rand = new Random();
+                int randNumber = rand.Next(0, count);
+                System.Windows.Forms.MessageBox.Show(alanFile.Descendants("blurbs").Elements("blurb").ElementAt(randNumber).Value);
+            }
+            else System.Windows.Forms.MessageBox.Show("Keep up the good work Alan.");
         }
 
         public void setWorksheet()
