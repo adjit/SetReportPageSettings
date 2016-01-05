@@ -126,7 +126,7 @@ namespace SetReportPageSettings
 
             thisWorksheet.CenterHeader = psf.customHeaderList.Text;
             if (psf.landscapeRadioButton.Checked) thisWorksheet.Orientation = Excel.XlPageOrientation.xlLandscape;
-            else if (psf.portraitRadioButton.Checked) thisWorksheet.Orientation = Excel.XlPageOrientation.xlLandscape;
+            else if (psf.portraitRadioButton.Checked) thisWorksheet.Orientation = Excel.XlPageOrientation.xlPortrait;
 
             System.Windows.Forms.MessageBox.Show("Page setup completed!", "Success");
         }

@@ -13,7 +13,6 @@ D:\Users\atawil\Documents\Visual Studio 2015\Projects\Set Report Page Settings\S
 D:\Users\atawil\Documents\Visual Studio 2015\Projects\Set Report Page Settings\SetReportPageSettings\bin\Debug\Microsoft.Office.Tools.Common.xml
 D:\Users\atawil\Documents\Visual Studio 2015\Projects\Set Report Page Settings\SetReportPageSettings\bin\Debug\Microsoft.Office.Tools.Excel.xml
 D:\Users\atawil\Documents\Visual Studio 2015\Projects\Set Report Page Settings\SetReportPageSettings\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
-D:\Users\atawil\Documents\Visual Studio 2015\Projects\Set Report Page Settings\SetReportPageSettings\obj\Debug\SetReportPageSettings.csprojResolveAssemblyReference.cache
 D:\Users\atawil\Documents\Visual Studio 2015\Projects\Set Report Page Settings\SetReportPageSettings\obj\Debug\SetReportPageSettings.pageSetupFinished.resources
 D:\Users\atawil\Documents\Visual Studio 2015\Projects\Set Report Page Settings\SetReportPageSettings\obj\Debug\SetReportPageSettings.pageSetupRibbon.resources
 D:\Users\atawil\Documents\Visual Studio 2015\Projects\Set Report Page Settings\SetReportPageSettings\obj\Debug\SetReportPageSettings.Properties.Resources.resources
